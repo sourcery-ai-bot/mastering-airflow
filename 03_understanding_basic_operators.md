@@ -260,6 +260,7 @@ docker-compose -f airflow-docker/docker-compose.yaml \
 Let us go ahead and setup Docker Container with SSH so that we can define task using SSHOperator.
 * Create docker container using SSH image with in the network **itvdelabnw**.
 * Go to **dockers/sshdemo** and run following commands to create the container.
+* Look at the commands in detail. The build tool searches for the Dockerfile by itself in the directory you point it to. The command below is pointing the `pwd`
 
 ```shell
 docker build -t pythonapp .

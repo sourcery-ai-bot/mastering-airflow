@@ -6,7 +6,7 @@ Let us get an overview of Airflow Documentation. It is available under https://a
 
 ## Airflow DAGs and Tasks
 Let us get an overview of Airflow DAGs and Tasks.
-* DAG stands for Directed Acyclic Graph. We define workflows using Python programs leveraing DAG API.
+* DAG stands for Directed Acyclic Graph. We define workflows using Python programs leveraging DAG API.
 * A DAG consists of tasks in appropriate order depending upon the requirements.
 * Here are some of the common patterns with respect to defining tasks as part of DAGs.
   * Serial tasks

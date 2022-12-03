@@ -20,7 +20,7 @@ with DAG(
 
     run_this = BashOperator(
         task_id='run_shell_script_using_bash',
-        bash_command='source /Users/itversity/Projects/Internal/bootcamp/itversity-material/mastering-airflow/scripts/02_run_script.sh ',
+        bash_command='source /run/media/solverbot/repoA/gitFolders/mastering-airflow/dev/scripts/archive/02_run_script.sh ',
     )
 
     run_this
