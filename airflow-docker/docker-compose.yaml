@@ -87,7 +87,7 @@ services:
       test: ["CMD", "pg_isready", "-U", "airflow"]
       interval: 5s
       retries: 5
-    restart: always
+    restart: "no"
 
   redis:
     image: redis:latest
@@ -100,7 +100,7 @@ services:
       interval: 5s
       timeout: 30s
       retries: 50
-    restart: always
+    restart: "no"
 
   airflow-webserver:
     <<: *airflow-common
@@ -114,7 +114,7 @@ services:
       interval: 10s
       timeout: 10s
       retries: 5
-    restart: always
+    restart: "no"
     depends_on:
       <<: *airflow-common-depends-on
       airflow-init:
@@ -130,7 +130,7 @@ services:
       interval: 10s
       timeout: 10s
       retries: 5
-    restart: always
+    restart: "no"
     depends_on:
       <<: *airflow-common-depends-on
       airflow-init:
@@ -153,7 +153,7 @@ services:
       # Required to handle warm shutdown of the celery workers properly
       # See https://airflow.apache.org/docs/docker-stack/entrypoint.html#signal-propagation
       DUMB_INIT_SETSID: "0"
-    restart: always
+    restart: "no"
     depends_on:
       <<: *airflow-common-depends-on
       airflow-init:
@@ -169,7 +169,7 @@ services:
       interval: 10s
       timeout: 10s
       retries: 5
-    restart: always
+    restart: "no"
     depends_on:
       <<: *airflow-common-depends-on
       airflow-init:
@@ -281,7 +281,7 @@ services:
       interval: 10s
       timeout: 10s
       retries: 5
-    restart: always
+    restart: "no"
     depends_on:
       <<: *airflow-common-depends-on
       airflow-init:
