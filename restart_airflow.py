@@ -17,5 +17,5 @@ process_ids_str = ' '.join(process_ids)
 
 subprocess.check_call(f'kill -9 {process_ids_str}', shell=True)
 subprocess.check_call(f'rm -rf {airflow_home}/*.pid', shell=True)
-subprocess.check_call(f'airflow webserver -p 8080 -D', shell=True)
-subprocess.check_call(f'airflow scheduler -D', shell=True)
+subprocess.check_call('airflow webserver -p 8080 -D', shell=True)
+subprocess.check_call('airflow scheduler -D', shell=True)
